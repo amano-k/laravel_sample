@@ -44,7 +44,7 @@ class Item extends Model
      */
     public function getCreatedAtAttribute(string $value)
     {
-        return Carbon::parse($value)->format(Config::get('format')['datetime']);
+        return Carbon::parse($value)->format(Config::get('format.datetime'));
     }
 
     /**
@@ -52,6 +52,6 @@ class Item extends Model
      */
     public function getUpdatedAtAttribute(string $value)
     {
-        return Carbon::parse($value)->format(Config::get('format')['datetime']);
+        return Carbon::parse($value)->format(Config::get('format.datetime'));
     }
 }
