@@ -22,7 +22,7 @@ class ItemRepository implements ItemRepositoryInterface
 
     public function getAll(array $request)
     {
-        return $this->item->ofConditions($request)
+        return $this->item->conditions($request)
             ->paginate($request['limit']);
     }
 
