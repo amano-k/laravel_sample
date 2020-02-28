@@ -14,21 +14,21 @@ interface ItemRepositoryInterface
 
     /**
      * アイテム一覧を取得
-     * @param  array request
+     * @param  array $input
      * @return Illuminate\Database\Eloquent\Collection
      */
     public function getAll(array $input);
 
     /**
      * アイテム登録
-     * @param  array request
+     * @param  array $input
      * @return boolean
      */
     public function add(array $input);
 
     /**
      * アイテム削除
-     * @param  int     $id
+     * @param  int $id
      * @return boolean
      */
     public function delete(int $id);
