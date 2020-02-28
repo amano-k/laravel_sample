@@ -19,14 +19,14 @@ class ItemService
         return $this->itemRepository->getById($id);
     }
 
-    public function getAll(array $request)
+    public function getAll(array $input)
     {
-        return $this->itemRepository->getAll($request);
+        return $this->itemRepository->getAll($input);
     }
 
-    public function add(array $request)
+    public function add(array $input)
     {
-        return $this->itemRepository->add($request);
+        return $this->itemRepository->add($input);
     }
 
     public function delete(int $id)

@@ -17,14 +17,14 @@ interface ItemRepositoryInterface
      * @param  array request
      * @return Illuminate\Database\Eloquent\Collection
      */
-    public function getAll(array $request);
+    public function getAll(array $input);
 
     /**
      * アイテム登録
      * @param  array request
      * @return boolean
      */
-    public function add(array $request);
+    public function add(array $input);
 
     /**
      * アイテム削除

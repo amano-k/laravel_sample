@@ -20,19 +20,19 @@ class ItemRepository implements ItemRepositoryInterface
         return $this->item->findOrFail($id);
     }
 
-    public function getAll(array $request)
+    public function getAll(array $input)
     {
-        return $this->item->conditions($request)
-            ->paginate($request['limit']);
+        return $this->item->conditions($input)
+            ->paginate($input['limit']);
     }
 
     public function isPage(int $page)
     {
     }
 
-    public function add(array $request)
+    public function add(array $input)
     {
-        return $this->item->fill($request)->save();
+        return $this->item->fill($input)->save();
     }
 
     public function delete(int $id)

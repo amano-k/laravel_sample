@@ -32,7 +32,7 @@ class Item extends Model
      * 共有で使う検索条件（スコープ）
      * prefixにscopeを付けるとQueryBuilderで関数を連結出来る。
      */
-    public function scopeConditions(Builder $query, array $request)
+    public function scopeConditions(Builder $query, array $input)
     {
         $query->orderBy('id', 'desc');
         return $query;

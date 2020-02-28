@@ -28,7 +28,8 @@ class ItemController extends Controller
      */
     public function list(ItemListRequest $request)
     {
-        $items = $this->itemService->getAll($request->all());
+        $input = $request->all();
+        $items = $this->itemService->getAll($input);
         return view('item.list', [
             'items'  => $items
         ]);
@@ -53,7 +54,8 @@ class ItemController extends Controller
         ];
 
         try {
-            $result = $this->itemService->add($request->all());
+            $input = $request->all();
+            $result = $this->itemService->add($input);
             if ($result === true) {
                 $message = [
                     'type'    => 'success',
