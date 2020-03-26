@@ -38,7 +38,7 @@
       {{ session('alert_message')['message'] }}
   </div>
   @endif
-  <div class="wrapper ">
+  <div class="wrapper">
     <div class="sidebar" data-color="azure" data-background-color="white">
       <div class="logo">
         <a href="{{ route('item_list') }}" class="simple-text logo-mini">Laravelサンプル</a>

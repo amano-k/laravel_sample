@@ -13,6 +13,15 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+/**
+ * laravelサンプル用
+ */
+Route::group([
+    'namespace'  => 'Api'
+], function () {
+    Route::get('/item', 'ItemController@list')->name('api_item_list');
 });
